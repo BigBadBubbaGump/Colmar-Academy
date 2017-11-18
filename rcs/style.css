@@ -104,6 +104,11 @@ h5 {
   background-color: white;
 }
 
+#mini-masthead {
+  visibility: hidden;
+  position: absolute;
+}
+
 .logo {
   display: flex;
   align-content: center;
@@ -155,6 +160,29 @@ h5 {
   padding: .5rem;
 }
 
+@media only screen and (max-width:1024px) {
+#masthead {
+  visibility: hidden;
+  position: absolute;
+}
+
+#mini-masthead {
+  visibility: visible;
+  display:flex;
+  position: fixed;
+  width:100%;
+  height:4rem;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+
+}
+#mini-masthead img {
+  height:2rem;
+  width:2rem;
+}
+}
+
 .banner {
   display: flex;
   flex-direction: row;
@@ -163,6 +191,11 @@ h5 {
   width:100%;
   background-color: #aaaaaa;
   top:4rem;
+}
+
+.mini-banner {
+  visibility: hidden;
+  position: absolute;
 }
 
 .banner-pic {
@@ -187,10 +220,7 @@ h5 {
   position: relative;
   width: 100%;
   height:auto;
-
 }
-
-
 
 .banner a {
   display: block;
@@ -212,8 +242,29 @@ h5 {
   background-color: #aaaaaa;
 }
 
+@media only screen and (max-width:1024px) {
+  .banner {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .mini-banner {
+    visibility: visible;
+    display: flex;
+    position:relative;
+    margin-top: 65px;
+    width:100%;
+    height:auto;
+    background-image: url('/images/banner.jpg');
+    }
+
+   .mini-banner img {
 
 
+
+
+   }
+}
 .sect-two-container {
   display: flex;
   position: relative;
@@ -245,8 +296,6 @@ p {
   line-height: 1.4;
   margin-bottom: 1.5rem;
 }
-
-
 
 .sect-two-rightside {
   display: flex;
@@ -308,6 +357,12 @@ p {
 
 }
 
+@media only screen and (max-width:1024px) {
+  .sect-two-container {
+    visibility: hidden;
+    position: absolute;
+  }
+}
 .sect-three-container {
   display: flex;
   flex-direction: column;
@@ -360,6 +415,17 @@ p {
 .course-choice-text h3,
 .course-choice-text h5 {
   margin-bottom: .5rem;
+}
+
+@media only screen and (max-width:1024px) {
+  .sect-three-container {
+    visibility: hidden;
+    position: absolute;
+  }
+  .thesis {
+    visibility: hidden;
+    position: absolute;
+  }
 }
 
 .thesis {
@@ -439,7 +505,13 @@ p {
 .ny-thesis {
   margin-top: 1rem;
 }
-@media and screen and (max-width:1024px) {
+@media only screen and (max-width:1024px) {
+  .sect-four-container {
+    visibility: hidden;
+    position: absolute;
+  }
 
-
-}
+  .footer {
+    visibility: hidden;
+    position: absolute;
+  }
